@@ -3,20 +3,24 @@
 run a tor relay in a container
 
 Bridge relay:
+```bash
 docker run -d \
 	--restart always \
 	-v /etc/localtime:/etc/localtime:ro \
 	-p 9001:9001 \
 		--name tor-relay \
 		chenjia404/tor-relay -f /etc/tor/torrc.bridge
+```
 
 Exit relay:
+```bash
 	docker run -d \
 	--restart always \
 	-v /etc/localtime:/etc/localtime:ro \
 	-p 9001:9001 \
 		--name tor-relay \
 		chenjia404/tor-relay -f /etc/tor/torrc.exit
+```
 
 tor-0.4.2.7
 
