@@ -1,4 +1,26 @@
- ### Environment variables
+## tor-relay
+
+run a tor relay in a container
+
+Bridge relay:
+docker run -d \
+	--restart always \
+	-v /etc/localtime:/etc/localtime:ro \
+	-p 9001:9001 \
+		--name tor-relay \
+		chenjia404/tor-relay -f /etc/tor/torrc.bridge
+
+Exit relay:
+	docker run -d \
+	--restart always \
+	-v /etc/localtime:/etc/localtime:ro \
+	-p 9001:9001 \
+		--name tor-relay \
+		chenjia404/tor-relay -f /etc/tor/torrc.exit
+
+tor-0.4.2.7
+
+### Environment variables
 
 | Name                         | Description                                                                  | Default value |
 | ---------------------------- |:----------------------------------------------------------------------------:| -------------:|
