@@ -2,6 +2,16 @@
 
 run a tor relay in a container
 
+middle:
+```bash
+docker run -d \
+	--restart always \
+	-v /etc/localtime:/etc/localtime:ro \
+	-p 9001:9001 \
+		--name tor-relay \
+		chenjia404/tor-relay -f /etc/tor/torrc.middle
+```
+
 Bridge relay:
 ```bash
 docker run -d \
@@ -22,7 +32,7 @@ Exit relay:
 		chenjia404/tor-relay -f /etc/tor/torrc.exit
 ```
 
-tor-0.4.2.7
+tor-0.4.6.9
 
 ### Environment variables
 
