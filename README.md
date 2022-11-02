@@ -33,7 +33,22 @@ Exit relay:
 		chenjia404/tor-relay -f /etc/tor/torrc.exit
 ```
 
-tor-0.4.6.9
+Save the key and data of the relay node：
+```bash
+mkdir -p /home/tor-data
+chown -R 100:100 /home/tor-data
+
+docker run -d \
+	--restart always \
+	-v  /home/tor-data:/var/lib/tor/.tor
+	-v /etc/localtime:/etc/localtime:ro \
+	-p 9001:9001 \
+		--name tor-relay \
+		chenjia404/tor-relay -f /etc/tor/torrc.middle
+```
+
+
+tor-0.4.7.10
 
 ### Environment variables
 
