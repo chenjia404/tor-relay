@@ -32,7 +32,7 @@ docker run -d \
 		chenjia404/tor-relay -f /etc/tor/torrc.exit
 ```
 
-Save the key and data of the relay node：
+保存中继节点的key和数据：
 ```bash
 mkdir -p /home/tor-data
 chown -R 100:100 /home/tor-data
@@ -53,10 +53,10 @@ tor-0.4.7.10
 | Name                         | Description                                                                  | 默认值|
 | ---------------------------- |:----------------------------------------------------------------------------:| -------------:|
 | **RELAY_TYPE**               | 中继类型(bridge, middle or exit)                                              | middle        |
-| **RELAY_NICKNAME**           | 节点的昵称                                                                    | hacktheplanet |
+| **RELAY_NICKNAME**           | 节点的昵称                                                                    | default |
 | **CONTACT_GPG_FINGERPRINT**  | 你的GPG ID或者指纹                                                            | none          |
 | **CONTACT_NAME**             | 你的昵称                                                                      | none          |
 | **CONTACT_EMAIL**            | 你的联系邮箱                                                                  | none          |
-| **RELAY_BANDWIDTH_RATE**     | 限制允许通过中继的流量 (必须 > 20KB/s)                                          | 1000 KBytes    |
-| **RELAY_BANDWIDTH_BURST**    | 允许临时激增最高流量                                                           | 2000 KBytes    |
+| **RELAY_BANDWIDTH_RATE**     | 限制允许通过中继的流量 (必须 > 20KB/s)                                          | 10000 KBytes    |
+| **RELAY_BANDWIDTH_BURST**    | 允许临时激增最高流量                                                           | 20000 KBytes    |
 | **RELAY_PORT**               | 用于传入 Tor 连接的默认端口 (ORPort)                                           | 9001          |

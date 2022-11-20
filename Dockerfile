@@ -37,10 +37,10 @@ COPY run.sh /run.sh
 RUN chmod ugo+rx /run.sh
 
 # default environment variables
-ENV RELAY_NICKNAME hacktheplanet
+ENV RELAY_NICKNAME default
 ENV RELAY_TYPE middle
-ENV RELAY_BANDWIDTH_RATE 1000 KBytes
-ENV RELAY_BANDWIDTH_BURST 2000 KBytes
+ENV RELAY_BANDWIDTH_RATE 10000 KBytes
+ENV RELAY_BANDWIDTH_BURST 20000 KBytes
 ENV RELAY_PORT 9001
 
 # make sure files are owned by tor user
