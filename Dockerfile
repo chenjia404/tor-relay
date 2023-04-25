@@ -16,7 +16,7 @@
 # 		--name tor-relay \
 # 		chenjia404/tor-relay -f /etc/tor/torrc.exit
 #
-FROM alpine:3.16
+FROM alpine:3
 LABEL maintainer "chenjia404 <chenjiablog@gmail.com>"
 
 RUN apk --no-cache add \
