@@ -41,7 +41,6 @@ jobs:
           images: ${{ env.IMAGE_NAME }}
           tags: |
             type=raw,value=latest
-            type=raw,value={{date 'YYYYMM'}}
 
       - name: Build and push image
         uses: docker/build-push-action@v6
