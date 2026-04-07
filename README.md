@@ -50,6 +50,30 @@ docker run -d \
 
 tor-0.4.7.10
 
+### GitHub Actions
+
+This repository includes a GitHub Actions workflow that rebuilds and pushes the Docker image every month.
+
+Add these repository secrets in `Settings > Secrets and variables > Actions`:
+
+| Name | Description |
+| --- | --- |
+| `DOCKERHUB_USERNAME` | Docker Hub username |
+| `DOCKERHUB_TOKEN` | Docker Hub access token |
+
+Workflow file:
+`.github/workflows/monthly-image-rebuild.yml`
+
+Triggers:
+
+- Automatically on the 1st day of every month at `03:00 UTC`
+- Manually via `workflow_dispatch`
+
+Published tags:
+
+- `latest`
+- `YYYYMM`, for example `202604`
+
 ### Environment variables
 
 | Name                         | Description                                                                  | Default value |

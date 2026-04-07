@@ -48,6 +48,30 @@ docker run -d \
 
 tor-0.4.7.10
 
+### GitHub Actions
+
+仓库已支持每月自动重新构建并推送 Docker 镜像。
+
+在 GitHub 仓库的 `Settings > Secrets and variables > Actions` 中添加：
+
+| Name | Description |
+| --- | --- |
+| `DOCKERHUB_USERNAME` | Docker Hub 用户名 |
+| `DOCKERHUB_TOKEN` | Docker Hub Access Token |
+
+工作流文件：
+`.github/workflows/monthly-image-rebuild.yml`
+
+触发方式：
+
+- 每月 1 日 `03:00 UTC` 自动执行一次
+- 支持在 GitHub Actions 页面手动触发
+
+推送的镜像标签：
+
+- `latest`
+- `YYYYMM`，例如 `202604`
+
 ### 环境变量
 
 | Name                         | Description                                                                  | 默认值|
