@@ -52,7 +52,7 @@ docker run -d \
 ```
 
 
-tor-0.4.7.10
+tor-0.4.9.6
 
 ### GitHub Actions
 

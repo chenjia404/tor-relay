@@ -50,7 +50,7 @@ docker run -d \
 		chenjia404/tor-relay -f /etc/tor/torrc.middle
 ```
 
-tor-0.4.7.10
+tor-0.4.9.6
 
 ### GitHub Actions
 
