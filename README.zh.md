@@ -2,7 +2,7 @@
 [![Docker Hub](https://img.shields.io/docker/v/chenjia404/tor-relay?sort=semver&label=docker%20hub)](https://hub.docker.com/r/chenjia404/tor-relay)
 [![Docker Pulls](https://img.shields.io/docker/pulls/chenjia404/tor-relay?label=pulls)](https://hub.docker.com/r/chenjia404/tor-relay)
 [![Image Size](https://img.shields.io/docker/image-size/chenjia404/tor-relay/latest?label=size)](https://hub.docker.com/r/chenjia404/tor-relay)
-[![Docker Publish](https://github.com/chenjia404/tor-relay/actions/workflows/docker-publish.yml/badge.svg)](https://github.com/chenjia404/tor-relay/actions/workflows/docker-publish.yml)
+[![Docker Publish](https://github.com/chenjia404/tor-relay/actions/workflows/monthly-image-rebuild.yml/badge.svg)](https://github.com/chenjia404/tor-relay/actions/workflows/monthly-image-rebuild.yml)
 
 使用docker容器运行tor中继
 
