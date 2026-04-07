@@ -1,4 +1,8 @@
 ## tor-relay
+[![Docker Hub](https://img.shields.io/docker/v/chenjia404/tor-relay?sort=semver&label=docker%20hub)](https://hub.docker.com/r/chenjia404/tor-relay)
+[![Docker Pulls](https://img.shields.io/docker/pulls/chenjia404/tor-relay?label=pulls)](https://hub.docker.com/r/chenjia404/tor-relay)
+[![Image Size](https://img.shields.io/docker/image-size/chenjia404/tor-relay/latest?label=size)](https://hub.docker.com/r/chenjia404/tor-relay)
+[![Docker Publish](https://github.com/chenjia404/tor-relay/actions/workflows/docker-publish.yml/badge.svg)](https://github.com/chenjia404/tor-relay/actions/workflows/docker-publish.yml)
 
 run a tor relay in a container
 [中文](./README.zh.md)
@@ -66,6 +70,7 @@ Workflow file:
 
 Triggers:
 
+- On every push to `master`
 - Automatically on the 1st day of every month at `03:00 UTC`
 - Manually via `workflow_dispatch`
 
@@ -73,6 +78,11 @@ Published tags:
 
 - `latest`
 - `YYYYMM`, for example `202604`
+
+Published platforms:
+
+- `linux/amd64`
+- `linux/arm64`
 
 ### Environment variables
 

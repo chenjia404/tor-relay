@@ -1,4 +1,8 @@
 ## tor-relay
+[![Docker Hub](https://img.shields.io/docker/v/chenjia404/tor-relay?sort=semver&label=docker%20hub)](https://hub.docker.com/r/chenjia404/tor-relay)
+[![Docker Pulls](https://img.shields.io/docker/pulls/chenjia404/tor-relay?label=pulls)](https://hub.docker.com/r/chenjia404/tor-relay)
+[![Image Size](https://img.shields.io/docker/image-size/chenjia404/tor-relay/latest?label=size)](https://hub.docker.com/r/chenjia404/tor-relay)
+[![Docker Publish](https://github.com/chenjia404/tor-relay/actions/workflows/docker-publish.yml/badge.svg)](https://github.com/chenjia404/tor-relay/actions/workflows/docker-publish.yml)
 
 使用docker容器运行tor中继
 
@@ -64,6 +68,7 @@ tor-0.4.7.10
 
 触发方式：
 
+- 每次 push 到 `master` 时自动执行
 - 每月 1 日 `03:00 UTC` 自动执行一次
 - 支持在 GitHub Actions 页面手动触发
 
@@ -71,6 +76,11 @@ tor-0.4.7.10
 
 - `latest`
 - `YYYYMM`，例如 `202604`
+
+支持的镜像架构：
+
+- `linux/amd64`
+- `linux/arm64`
 
 ### 环境变量
 
